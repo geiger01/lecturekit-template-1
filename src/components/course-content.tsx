@@ -13,7 +13,7 @@ export const CourseContent = ({ course }: ICourseContentProps) => {
     }, 0);
 
     return (
-        <div className="max-w-screen-xl mx-auto px-4 py-28 gap-12 text-gray-600 md:px-8">
+        <div className="max-w-screen-xl mx-auto px-4 py-20 gap-12 text-gray-600 md:px-8">
             <h2 className='text-2xl text-gray-800 font-bold'>Course Content</h2>
             <div className='flex text-gray-500 items-center mt-2'>
                 <p>{totalChapters} Chapters</p>

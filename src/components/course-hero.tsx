@@ -29,7 +29,7 @@ export const CourseHero = ({ course }: ICourseHeroProps) => {
     ];
 
     return (
-        <div className="max-w-screen-xl mx-auto px-4 py-28 gap-12 text-gray-600 md:px-8 xl:flex">
+        <div className="max-w-screen-xl mx-auto px-4 py-20 gap-12 text-gray-600 md:px-8 xl:flex">
             <div className="space-y-5 max-w-2xl mx-auto text-center xl:text-left">
                 <div className="flex flex-wrap items-center justify-center gap-6 xl:justify-start">
                     {
@@ -63,7 +63,7 @@ export const CourseHero = ({ course }: ICourseHeroProps) => {
                 </div>
             </div>
             <div className="flex-1 max-w-xl mx-auto mt-14 xl:mt-0">
-                <img src={course.thumbnail} className="rounded-lg w-full object-cover max-h-[300px]" alt={course.name} />
+                <img src={course.thumbnail} className="rounded-lg w-full object-cover object-top max-h-[320px]" alt={course.name} />
             </div>
         </div>
     );
