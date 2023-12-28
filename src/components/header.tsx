@@ -16,7 +16,7 @@ export const Header = () => {
                     <Link aria-label="LectureKit" href="/" className="items-center space-x-2 md:flex">
                         <Logo />
                     </Link>
-                    <nav className="gap-8 hidden md:flex">
+                    <nav className="gap-8 flex">
                         <Link
                             href={'/'}
                             className={cn(
