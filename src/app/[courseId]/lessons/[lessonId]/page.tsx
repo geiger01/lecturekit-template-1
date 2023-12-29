@@ -17,5 +17,9 @@ async function getLessons(courseId: string, lessonId: string) {
 
 export default async function LessonPage({ params }: { params: { courseId: string; lessonId: string; }; }) {
     const lesson = await getLessons(params.courseId, params.lessonId);
-    return <div>Lesson Page: {lesson.name}</div>;
+    return (
+        <>
+            Lesson Page: {lesson.name}
+        </>
+    );
 }

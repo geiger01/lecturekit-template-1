@@ -31,18 +31,7 @@ export const Header = () => {
                     </nav>
                 </div>
                 <div className="flex items-center gap-2">
-                    {/* <ModeToggle className="hidden md:flex" />
-                    <HamburgerMenu className="flex md:hidden" />
-                    <SignedIn>
-                        <UserAccountNav
-                            user={user}
-                        />
-                    </SignedIn>
-                    <SignedOut>
-                        <SignInButton mode='modal' redirectUrl='/dashboard' >
-                            <Button variant={'outline'}>Get Started</Button>
-                        </SignInButton>
-                    </SignedOut> */}
+
                 </div>
             </div>
         </header>
