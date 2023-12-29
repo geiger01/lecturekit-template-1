@@ -1,3 +1,5 @@
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
 import Link from "next/link";
 
 async function getCourses() {
@@ -21,12 +23,14 @@ export default async function Home() {
   const courses = await getCourses();
 
   return (
-    <section>
-      <div className="flex gap-5">
+    <>
+      <Header />
+      <div className="flex gap-5 min-h-screen">
         {courses.map((c) => (
           <Link className="border" key={c._id} href={`/${c._id}`} >{c.name}</Link>
         ))}
       </div>
-    </section>
+      <Footer />
+    </>
   );
 }
