@@ -35,33 +35,3 @@
 		@apply bg-background text-foreground;
 	}
 }
-
-.lesson-text {
-	h1 {
-		@apply text-2xl md:text-3xl font-bold mb-2 text-gray-800;
-	}
-
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		@apply text-xl md:text-2xl font-bold mb-2 text-gray-800;
-	}
-
-	div {
-		@apply text-gray-500;
-	}
-
-	p {
-		@apply mb-2;
-	}
-
-	blockquote {
-		@apply border-l-2 border-blue-400 pl-3 my-2;
-	}
-
-	pre {
-		@apply border rounded-lg p-5 bg-gray-900 text-white pl-3 my-3;
-	}
-}

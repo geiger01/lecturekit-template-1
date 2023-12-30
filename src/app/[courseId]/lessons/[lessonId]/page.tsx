@@ -54,7 +54,7 @@ export default async function LessonPage({ params }: { params: { courseId: strin
                 <div className="w-full border rounded-lg mt-8 aspect-video"></div>
                 {/* Lesson Additional Text */}
                 <div
-                    className="lesson-text mt-8"
+                    className="prose lg:prose-lg max-w-none mt-8"
                     dangerouslySetInnerHTML={{ __html: lesson.additionalText }} />
             </div>
         </div>
