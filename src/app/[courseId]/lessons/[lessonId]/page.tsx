@@ -51,4 +51,4 @@ export default async function LessonPage({ params }: { params: { courseId: strin
             </div>
         </div>
     );
-}
+};
