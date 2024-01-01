@@ -1,4 +1,5 @@
 import { CourseHeader } from "@/components/course-header";
+import { LessonSidenav } from "@/components/lesson-sidenav";
 
 async function getCourse(courseId: string) {
     const res = await fetch(`https://lecturekit-new-git-dev-geiger01.vercel.app/api/v1/courses/${courseId}`, {
@@ -32,9 +33,12 @@ export default async function LessonLayout({
     return (
         <>
             <CourseHeader course={course} />
-            <main className="flex w-full flex-1 flex-col">
-                {children}
-            </main>
+            <div className="flex gap-5 h-full">
+                <LessonSidenav course={course} />
+                <main className="w-full">
+                    {children}
+                </main>
+            </div>
         </>
     );
 }

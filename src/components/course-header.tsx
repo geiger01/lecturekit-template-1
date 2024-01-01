@@ -10,7 +10,7 @@ interface ICourseHeaderProps {
 
 export const CourseHeader = ({ course }: ICourseHeaderProps) => {
     return (
-        <header className={"w-full z-40 bg-background"}>
+        <header className={"sticky top-0 z-40 bg-white"}>
             <div className="px-3 flex h-16 items-center justify-between py-4 border-b">
                 <div className="flex max-w-full truncate">
                     <Link aria-label="LectureKit" href="/" className="items-center space-x-2 hidden sm:flex">

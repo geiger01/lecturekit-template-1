@@ -32,23 +32,21 @@ export default async function LessonPage({ params }: { params: { courseId: strin
     const currentLessonIdx = (lessons.results || []).findIndex((l: any) => l.id === lesson.id) || 0;
 
     return (
-        <div className="px-3 pb-5">
-            <div className="max-w-screen-lg mx-auto mt-8">
-                <div className="flex item-center justify-between gap-5 flex-wrap">
-                    <div className="flex flex-col gap-1">
-                        <p className="text-gray-500">Lesson {currentLessonIdx + 1} of {lessons.total}</p>
-                        <h2 className="text-2xl md:text-3xl font-bold">{lesson.name}</h2>
-                    </div>
-                    <LessonActions currentLessonIdx={currentLessonIdx} lessons={lessons} />
+        <div className="max-w-screen-lg mx-auto p-5 md:p-8">
+            <div className="flex item-center justify-between gap-5 flex-wrap">
+                <div className="flex flex-col gap-1">
+                    <p className="text-gray-500">Lesson {currentLessonIdx + 1} of {lessons.total}</p>
+                    <h2 className="text-2xl md:text-3xl font-bold">{lesson.name}</h2>
                 </div>
-
-                <LessonVideo lesson={lesson} />
-
-                {/* Lesson Additional Text */}
-                <div
-                    className="prose lg:prose-lg max-w-none mt-8"
-                    dangerouslySetInnerHTML={{ __html: lesson.additionalText }} />
+                <LessonActions lessons={lessons} />
             </div>
+
+            <LessonVideo lesson={lesson} />
+
+            {/* Lesson Additional Text */}
+            <div
+                className="prose lg:prose-lg max-w-none mt-8"
+                dangerouslySetInnerHTML={{ __html: lesson.additionalText }} />
         </div>
     );
 };

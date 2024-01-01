@@ -7,15 +7,15 @@ import { useParams, useRouter } from 'next/navigation';
 
 interface ILessonActionsProps {
     lessons: { total: number, results: any[]; };
-    currentLessonIdx: number;
 }
 
-export const LessonActions = ({ lessons, currentLessonIdx }: ILessonActionsProps) => {
+export const LessonActions = ({ lessons }: ILessonActionsProps) => {
     const router = useRouter();
-    const { courseId } = useParams();
+    const { courseId, lessonId } = useParams();
 
-    const nextLesson = lessons.results[currentLessonIdx + 1];
-    const prevLesson = lessons.results[currentLessonIdx - 1];
+    const idx = lessons.results.findIndex((l) => l.id === lessonId) || 0;
+    const nextLesson = lessons.results[idx + 1];
+    const prevLesson = lessons.results[idx - 1];
 
     return (
         <div className="flex items-center gap-3">
