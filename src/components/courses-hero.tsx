@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
+import { cn } from '@/lib/utils';
 
 interface ICoursesHeroProps {
     courses: any[];
@@ -19,10 +20,9 @@ export const CoursesHero = ({ courses }: ICoursesHeroProps) => {
                         Explore the Blueprint for Your Custom Course Platform
                     </p>
                 </div>
-
-                <div className='max-w-screen-md px-4 py-20 md:px-8 flex gap-8 items-stretch justify-center mx-auto flex-wrap'>
+                <div className='max-w-screen-xl px-4 py-20 md:px-8 flex gap-8 items-stretch justify-center mx-auto flex-wrap'>
                     {courses.map((course) => (
-                        <Link className='flex-[300px] max-w-[350px]' href={`/${course._id}`} key={course._id}>
+                        <Link className='flex-[300px] max-w-[400px]' href={`/${course._id}`} key={course._id}>
                             <Card >
                                 <img className='rounded-t-lg w-full h-[200px] object-cover ' src={course.thumbnail} alt={course.name} />
                                 <CardHeader>
@@ -37,8 +37,6 @@ export const CoursesHero = ({ courses }: ICoursesHeroProps) => {
                     ))}
                 </div>
             </div>
-
-
         </>
     );
 };
