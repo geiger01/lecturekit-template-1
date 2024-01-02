@@ -1,6 +1,6 @@
+import { CoursesHero } from "@/components/courses-hero";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
-import Link from "next/link";
 
 async function getCourses() {
   const res = await fetch(`https://lecturekit-new-git-dev-geiger01.vercel.app/api/v1/courses`, {
@@ -25,11 +25,7 @@ export default async function Home() {
   return (
     <>
       <Header />
-      <div className="flex gap-5 min-h-screen">
-        {courses.map((c) => (
-          <Link className="border" key={c._id} href={`/${c._id}`} >{c.name}</Link>
-        ))}
-      </div>
+      <CoursesHero courses={courses} />
       <Footer />
     </>
   );
