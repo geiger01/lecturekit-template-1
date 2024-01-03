@@ -1,14 +1,15 @@
 import React from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './ui/accordion';
 import { Dot } from 'lucide-react';
+import { ICourse } from '@/types';
 
 interface ICourseContentProps {
-    course: any;
+    course: ICourse;
 }
 
 export const CourseContent = ({ course }: ICourseContentProps) => {
     const totalChapters = course.chapters.length;
-    const totalLessons = course.chapters.reduce((acc: number, i: any) => {
+    const totalLessons = course.chapters.reduce((acc: number, i) => {
         return acc += i.lessons.length;
     }, 0);
 
@@ -21,11 +22,11 @@ export const CourseContent = ({ course }: ICourseContentProps) => {
                 <p>{totalLessons} Lessons</p>
             </div>
             <Accordion className='mt-5 border [&>*:last-child]:border-none rounded-[15px]' type="single" defaultValue='item-1'>
-                {course.chapters.map((chapter: any, idx: number) => (
+                {course.chapters.map((chapter, idx: number) => (
                     <AccordionItem className='border-b text-gray-800 px-5' key={chapter.id} value={`item-${idx + 1}`}>
                         <AccordionTrigger className='text-lg font-medium text-left py-5'>{chapter.name}</AccordionTrigger>
                         <AccordionContent className='flex flex-col gap-[10px] pb-5'>
-                            {chapter.lessons.map((lesson: any) => (
+                            {chapter.lessons.map((lesson) => (
                                 <p className='text-base' key={lesson.id}>
                                     {lesson.name}
                                 </p>

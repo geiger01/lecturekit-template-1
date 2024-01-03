@@ -1,9 +1,10 @@
 'use client';
 
+import { ILesson } from '@/types';
 import React from 'react';
 
 interface ILessonVideoProps {
-    lesson: any;
+    lesson: ILesson;
 }
 
 export const LessonVideo = ({ lesson }: ILessonVideoProps) => {

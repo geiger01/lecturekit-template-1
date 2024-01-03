@@ -2,10 +2,10 @@ import Link from 'next/link';
 import React from 'react';
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
-import { cn } from '@/lib/utils';
+import { ICourse } from '@/types';
 
 interface ICoursesHeroProps {
-    courses: any[];
+    courses: Partial<ICourse>[];
 }
 
 export const CoursesHero = ({ courses }: ICoursesHeroProps) => {

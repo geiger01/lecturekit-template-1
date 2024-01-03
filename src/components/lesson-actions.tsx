@@ -4,9 +4,10 @@ import React from 'react';
 import { Button } from './ui/button';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useParams, useRouter } from 'next/navigation';
+import { ILesson } from '@/types';
 
 interface ILessonActionsProps {
-    lessons: { total: number, results: any[]; };
+    lessons: { total: number, results: ILesson[]; };
 }
 
 export const LessonActions = ({ lessons }: ILessonActionsProps) => {

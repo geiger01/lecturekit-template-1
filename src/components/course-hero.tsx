@@ -1,15 +1,16 @@
 
+import { ICourse } from '@/types';
 import dayjs from 'dayjs';
 import { BadgeCheck, CalendarCheck, Clapperboard } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 
 interface ICourseHeroProps {
-    course: any;
+    course: ICourse;
 }
 
 export const CourseHero = ({ course }: ICourseHeroProps) => {
-    const totalLessons = course.chapters.reduce((acc: number, i: any) => {
+    const totalLessons = course.chapters.reduce((acc: number, i) => {
         return acc += i.lessons.length;
     }, 0);
 

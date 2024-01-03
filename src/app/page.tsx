@@ -21,7 +21,7 @@ async function getCourses() {
 
 export default async function Home() {
   const courses = await getCourses();
-
+  
   return (
     <>
       <Header />

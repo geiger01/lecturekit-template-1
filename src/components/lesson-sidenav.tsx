@@ -6,9 +6,10 @@ import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
+import { ICourse } from '@/types';
 
 interface ILessonSidenavProps {
-    course: any;
+    course: ICourse;
 }
 
 export const LessonSidenav = ({ course }: ILessonSidenavProps) => {
@@ -38,11 +39,11 @@ export const LessonSidenav = ({ course }: ILessonSidenavProps) => {
             >
                 <p className='font-semibold border-b mx-5 py-3 bg-white'>Course content</p>
                 <div className="flex h-full flex-col overflow-auto pt-3">
-                    {course.chapters.map((chapter: any, idx: number) => (
+                    {course.chapters.map((chapter, idx: number) => (
                         <div className=' text-gray-800 px-5' key={chapter.id}>
                             <p className='font-semibold mb-1'>Chapter {idx + 1}: {chapter.name}</p>
                             <div className='pb-5 flex flex-col gap-[2px]'>
-                                {chapter.lessons.map((lesson: any, lessonIdx: number) => (
+                                {chapter.lessons.map((lesson, lessonIdx: number) => (
                                     <Link href={`/${courseId}/lessons/${lesson.id}`} className={cn('text-sm cursor-pointer font-light text-gray-500 hover:bg-blue-50 p-2 rounded-sm', lesson.id === lessonId ? 'bg-blue-50' : '')} key={lesson.id}>
                                         {lessonIdx + 1}: {lesson.name}
                                     </Link>

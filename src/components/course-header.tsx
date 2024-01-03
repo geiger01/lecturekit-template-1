@@ -3,9 +3,10 @@ import Link from "next/link";
 import React from "react";
 import { ChevronLeft } from "lucide-react";
 import { Logo } from "./logo";
+import { ICourse } from "@/types";
 
 interface ICourseHeaderProps {
-    course: any;
+    course: ICourse;
 }
 
 export const CourseHeader = ({ course }: ICourseHeaderProps) => {

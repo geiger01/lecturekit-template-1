@@ -1,5 +1,6 @@
 import { LessonActions } from "@/components/lesson-actions";
 import { LessonVideo } from "@/components/lesson-video";
+import { ILesson } from "@/types";
 
 async function getLessons(courseId: string, lessonId: string) {
     const res = await fetch(`https://lecturekit-new-git-dev-geiger01.vercel.app/api/v1/courses/${courseId}/lessons/${lessonId}`, {
@@ -29,7 +30,7 @@ async function getLessons(courseId: string, lessonId: string) {
 
 export default async function LessonPage({ params }: { params: { courseId: string; lessonId: string; }; }) {
     const { lesson, lessons } = await getLessons(params.courseId, params.lessonId);
-    const currentLessonIdx = (lessons.results || []).findIndex((l: any) => l.id === lesson.id) || 0;
+    const currentLessonIdx = (lessons.results || []).findIndex((l: ILesson) => l.id === lesson.id) || 0;
 
     return (
         <div className="max-w-screen-lg mx-auto p-5 md:p-8">
