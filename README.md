@@ -2,7 +2,7 @@ Here's the [live template](https://lecturekit-template-1.vercel.app).
 
 ## Getting Started
 
-First, make sure to add a `.env.local` file and add all missing credentials (You can copy from .env.example).
+First, make sure to add a `.env.local` file and add all missing credentials (You can copy from `.env.example`).
 
 Then, run the development server:
 
