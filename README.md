@@ -1,5 +1,3 @@
-https://lecturekit-template-1.vercel.app/
-
 Here's the [live template](https://lecturekit-template-1.vercel.app).
 
 ## Getting Started
