@@ -3,7 +3,7 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 
 async function getCourses() {
-  const res = await fetch(`https://lecturekit-new-git-dev-geiger01.vercel.app/api/v1/courses`, {
+  const res = await fetch(`https://www.lecturekit.io/api/v1/courses`, {
     cache: 'no-store',
     headers: {
       'x-api-key': process.env.LECTUREKIT_API_KEY || ''

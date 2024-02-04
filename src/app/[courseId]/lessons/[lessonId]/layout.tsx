@@ -2,7 +2,7 @@ import { CourseHeader } from "@/components/course-header";
 import { LessonSidenav } from "@/components/lesson-sidenav";
 
 async function getCourse(courseId: string) {
-    const res = await fetch(`https://lecturekit-new-git-dev-geiger01.vercel.app/api/v1/courses/${courseId}`, {
+    const res = await fetch(`https://www.lecturekit.io/api/v1/courses/${courseId}`, {
         cache: 'no-store',
         headers: {
             'x-api-key': process.env.LECTUREKIT_API_KEY || ''

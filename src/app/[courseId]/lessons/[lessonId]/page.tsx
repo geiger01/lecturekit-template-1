@@ -3,7 +3,7 @@ import { LessonVideo } from "@/components/lesson-video";
 import { ILesson } from "@/types";
 
 async function getLessons(courseId: string, lessonId: string) {
-    const res = await fetch(`https://lecturekit-new-git-dev-geiger01.vercel.app/api/v1/courses/${courseId}/lessons/${lessonId}`, {
+    const res = await fetch(`https://www.lecturekit.io/api/v1/courses/${courseId}/lessons/${lessonId}`, {
         cache: 'no-store',
         headers: {
             'x-api-key': process.env.LECTUREKIT_API_KEY || ''
@@ -12,7 +12,7 @@ async function getLessons(courseId: string, lessonId: string) {
 
     const data = await res.json();
 
-    const lessonsRes = await fetch(`https://lecturekit-new-git-dev-geiger01.vercel.app/api/v1/courses/${courseId}/lessons`, {
+    const lessonsRes = await fetch(`https://www.lecturekit.io/api/v1/courses/${courseId}/lessons`, {
         cache: 'no-store',
         headers: {
             'x-api-key': process.env.LECTUREKIT_API_KEY || ''
