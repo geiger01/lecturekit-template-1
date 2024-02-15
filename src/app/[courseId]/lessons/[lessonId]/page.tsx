@@ -1,4 +1,5 @@
 import { LessonActions } from "@/components/lesson-actions";
+import { LessonQuiz } from "@/components/lesson-quiz";
 import { LessonVideo } from "@/components/lesson-video";
 import { ILesson } from "@/types";
 
@@ -43,6 +44,8 @@ export default async function LessonPage({ params }: { params: { courseId: strin
             </div>
 
             <LessonVideo lesson={lesson} />
+
+            <LessonQuiz lesson={lesson} />
 
             {/* Lesson Additional Text */}
             <div

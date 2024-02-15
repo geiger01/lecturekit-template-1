@@ -23,6 +23,7 @@ export interface ILesson {
 	id: string;
 	name?: string;
 	url?: string;
+	quizHtml?: string;
 	additionalText?: string;
 	createdAt: Date;
 	updatedAt: Date;
