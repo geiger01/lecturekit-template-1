@@ -22,7 +22,7 @@ export const CoursesHero = ({ courses }: ICoursesHeroProps) => {
                 </div>
                 <div className='max-w-screen-xl px-4 py-20 md:px-8 flex gap-8 items-stretch justify-center mx-auto flex-wrap'>
                     {courses.map((course) => (
-                        <Link className='flex-[300px] max-w-[400px]' href={`/${course._id}`} key={course._id}>
+                        <Link className='flex-[300px] max-w-[400px]' href={`/${course.slug || course._id}`} key={course._id}>
                             <Card >
                                 <img className='rounded-t-lg w-full h-[200px] object-cover ' src={course.thumbnail} alt={course.name} />
                                 <CardHeader>

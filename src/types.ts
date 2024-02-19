@@ -1,5 +1,6 @@
 export interface ICourse {
 	_id?: string;
+	slug?: string;
 	projectId: string;
 	name: string;
 	description: string;

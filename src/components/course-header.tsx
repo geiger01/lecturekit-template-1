@@ -18,7 +18,7 @@ export const CourseHeader = ({ course }: ICourseHeaderProps) => {
                         <Logo mini className="w-10 h-10" />
                     </Link>
                     <div className="flex items-center gap-2 sm:pl-2 sm:ml-3 sm:border-l">
-                        <Link href={`/${course._id}`}>
+                        <Link href={`/${course.slug || course._id}`}>
                             <span
                                 className={cn(
                                     "text-slate-400 gap-1 group flex items-center text-sm font-normal hover:text-accent-foreground",)}
